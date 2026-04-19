@@ -61,3 +61,89 @@ export const updateProgress = async (req, res) => {
         res.status(500).json({ message: error.message });
     }
 };
+
+// --- ADMIN CRUD OPERATIONS ---
+
+// Languages
+export const createLanguage = async (req, res) => {
+    try {
+        const language = await Language.create(req.body);
+        res.status(201).json(language);
+    } catch (error) {
+        res.status(400).json({ message: error.message });
+    }
+};
+
+export const updateLanguage = async (req, res) => {
+    try {
+        const language = await Language.findByIdAndUpdate(req.params.id, req.body, { new: true });
+        res.json(language);
+    } catch (error) {
+        res.status(400).json({ message: error.message });
+    }
+};
+
+export const deleteLanguage = async (req, res) => {
+    try {
+        await Language.findByIdAndDelete(req.params.id);
+        res.json({ message: 'Language deleted' });
+    } catch (error) {
+        res.status(400).json({ message: error.message });
+    }
+};
+
+// Lessons
+export const createLesson = async (req, res) => {
+    try {
+        const lesson = await Lesson.create(req.body);
+        res.status(201).json(lesson);
+    } catch (error) {
+        res.status(400).json({ message: error.message });
+    }
+};
+
+export const updateLesson = async (req, res) => {
+    try {
+        const lesson = await Lesson.findByIdAndUpdate(req.params.id, req.body, { new: true });
+        res.json(lesson);
+    } catch (error) {
+        res.status(400).json({ message: error.message });
+    }
+};
+
+export const deleteLesson = async (req, res) => {
+    try {
+        await Lesson.findByIdAndDelete(req.params.id);
+        res.json({ message: 'Lesson deleted' });
+    } catch (error) {
+        res.status(400).json({ message: error.message });
+    }
+};
+
+// Quizzes
+export const createQuiz = async (req, res) => {
+    try {
+        const quiz = await Quiz.create(req.body);
+        res.status(201).json(quiz);
+    } catch (error) {
+        res.status(400).json({ message: error.message });
+    }
+};
+
+export const updateQuiz = async (req, res) => {
+    try {
+        const quiz = await Quiz.findByIdAndUpdate(req.params.id, req.body, { new: true });
+        res.json(quiz);
+    } catch (error) {
+        res.status(400).json({ message: error.message });
+    }
+};
+
+export const deleteQuiz = async (req, res) => {
+    try {
+        await Quiz.findByIdAndDelete(req.params.id);
+        res.json({ message: 'Quiz deleted' });
+    } catch (error) {
+        res.status(400).json({ message: error.message });
+    }
+};

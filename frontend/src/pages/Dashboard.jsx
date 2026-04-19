@@ -11,7 +11,7 @@ const Dashboard = () => {
 
     useEffect(() => {
         if (!user) {
-            navigate('/login');
+            navigate('/');
             return;
         }
         
@@ -40,6 +40,11 @@ const Dashboard = () => {
             <header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '3rem' }}>
                 <h1 style={{ fontSize: '2.5rem' }}>Speak Ease</h1>
                 <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
+                    {user?.role === 'admin' && (
+                        <button className="neo-btn" onClick={() => navigate('/admin')} style={{ padding: '0.5rem 1rem', fontSize: '1rem', background: 'var(--accent-blue)' }}>
+                            Admin Panel
+                        </button>
+                    )}
                     <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 'bold', fontSize: '1.25rem', color: 'var(--accent-peach)' }}>
                         <Flame fill="var(--accent-peach)" size={28} /> {progress?.streakDays || 0}
                     </div>

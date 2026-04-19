@@ -11,7 +11,7 @@ const LessonView = () => {
 
     useEffect(() => {
         if (!user) {
-            navigate('/login');
+            navigate('/');
             return;
         }
         

@@ -15,7 +15,7 @@ It features an extremely polished, high-contrast, premium "Neo-Brutalist Gamifie
 - ✅ **Custom UI/UX:** A bespoke CSS-variables design system mapping vivid colors to bouncy animations that avoids looking generic.
 
 ### Advanced Features (To Build)
-- ❌ **Admin Dashboard:** A panel for administrators to visually manage courses, lessons, and questions.
+- ✅ **Admin Dashboard:** A panel for administrators to visually manage courses, lessons, and questions.
 - ❌ **Leaderboard System:** Compare your XP and lesson streak with your friends globally.
 - ❌ **Audio & Pronunciation:** Speech Recognition and interactive listening exercises.
 - ❌ **AI-Based Recommendations:** Generative dynamic questions based on areas where the user struggles.

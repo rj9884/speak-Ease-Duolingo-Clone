@@ -38,6 +38,9 @@ This populates the database with default languages and lessons.
 ```bash
 node seed.js
 ```
+*The script will automatically create sample users for quick testing:*
+- **Admin User:** `admin@example.com` / `adminpassword`
+- **Normal User:** `john@example.com` / `password123`
 
 **Start the Server**
 ```bash

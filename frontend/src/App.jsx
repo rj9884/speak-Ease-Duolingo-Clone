@@ -7,6 +7,8 @@ import Dashboard from './pages/Dashboard';
 import LessonView from './pages/LessonView';
 import QuizView from './pages/QuizView';
 
+import AdminDashboard from './pages/AdminDashboard';
+
 function App() {
   return (
     <AuthProvider>
@@ -15,6 +17,7 @@ function App() {
           <Route path="/" element={<LandingPage />} />
           <Route path="/login" element={<Login />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/admin" element={<AdminDashboard />} />
           <Route path="/lesson/:languageId" element={<LessonView />} />
           <Route path="/quiz/:lessonId" element={<QuizView />} />
         </Routes>
