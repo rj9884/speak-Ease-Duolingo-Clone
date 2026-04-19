@@ -28,7 +28,7 @@ const importData = async () => {
         await Progress.deleteMany();
 
         // 1. Create Users
-        const users = await User.insertMany([
+        const users = await User.create([
             { name: 'Sarah', email: 'sarah@example.com', password: 'password123', role: 'user' },
             { name: 'John', email: 'john@example.com', password: 'password123', role: 'user' },
             { name: 'Admin', email: 'admin@example.com', password: 'adminpassword', role: 'admin' }
