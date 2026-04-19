@@ -24,7 +24,10 @@ const LandingPage = () => {
                 {[
                     { label: 'Spanish', color: 'var(--accent-lime)' },
                     { label: 'French', color: 'var(--accent-blue)' },
-                    { label: 'German', color: 'var(--accent-peach)' }
+                    { label: 'German', color: 'var(--accent-peach)' },
+                    { label: 'Japanese', color: 'var(--accent-purple)' },
+                    { label: 'English', color: 'var(--accent-yellow, #ffd166)' },
+                    { label: 'Italian', color: 'var(--accent-red, #ef476f)' }
                 ].map((lang) => (
                     <div key={lang.label} className="neo-box" style={{ padding: '1rem 2rem', background: lang.color, transform: 'rotate(-2deg)' }}>
                         <h3 style={{ fontSize: '1.5rem' }}>{lang.label}</h3>
