@@ -16,7 +16,7 @@ It features an extremely polished, high-contrast, premium "Neo-Brutalist Gamifie
 
 ### Advanced Features (To Build)
 - ✅ **Admin Dashboard:** A panel for administrators to visually manage courses, lessons, and questions.
-- ❌ **Leaderboard System:** Compare your XP and lesson streak with your friends globally.
+- ✅ **Leaderboard System:** Compare your XP and lesson streak with your friends globally.
 - ❌ **Audio & Pronunciation:** Speech Recognition and interactive listening exercises.
 - ❌ **AI-Based Recommendations:** Generative dynamic questions based on areas where the user struggles.
 - ❌ **Multi-language Interface:** Translating the actual website interface for different native tongues.

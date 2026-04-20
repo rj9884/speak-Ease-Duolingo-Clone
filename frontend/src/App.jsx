@@ -8,6 +8,7 @@ import LessonView from './pages/LessonView';
 import QuizView from './pages/QuizView';
 
 import AdminDashboard from './pages/AdminDashboard';
+import Leaderboard from './pages/Leaderboard';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/admin" element={<AdminDashboard />} />
           <Route path="/lesson/:languageId" element={<LessonView />} />
           <Route path="/quiz/:lessonId" element={<QuizView />} />
+          <Route path="/leaderboard" element={<Leaderboard />} />
         </Routes>
       </BrowserRouter>
     </AuthProvider>

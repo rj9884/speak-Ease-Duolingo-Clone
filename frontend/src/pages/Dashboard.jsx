@@ -51,6 +51,9 @@ const Dashboard = () => {
                     <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 'bold', fontSize: '1.25rem', color: 'orange' }}>
                         <Trophy fill="orange" size={28} /> {progress?.quizScore || 0} XP
                     </div>
+                    <button className="neo-btn" onClick={() => navigate('/leaderboard')} style={{ padding: '0.5rem 1rem', fontSize: '1rem', background: 'var(--accent-purple)', color: 'white' }}>
+                        <Trophy size={20} />
+                    </button>
                     <button className="neo-btn" onClick={logout} style={{ padding: '0.5rem 1rem', fontSize: '1rem', background: 'var(--bg-secondary)' }}>
                         <LogOut size={20} />
                     </button>
