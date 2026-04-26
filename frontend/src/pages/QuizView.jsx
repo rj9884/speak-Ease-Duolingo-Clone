@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';
-import { Check, X } from 'lucide-react';
+import { Check, X, ArrowLeft } from 'lucide-react';
 
 const QuizView = () => {
     const { lessonId } = useParams();
@@ -81,8 +81,13 @@ const QuizView = () => {
 
     return (
         <div style={{ minHeight: '100vh', padding: '2rem', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-            <div style={{ width: '100%', maxWidth: '600px', marginBottom: '2rem', height: '16px', background: 'white', border: 'var(--border-thick)', borderRadius: 'var(--radius-pill)', overflow: 'hidden' }}>
-                <div style={{ height: '100%', width: `${((currentIndex) / quizzes.length) * 100}%`, background: 'var(--accent-lime)', transition: 'width 0.3s ease' }}></div>
+            <div style={{ width: '100%', maxWidth: '600px', marginBottom: '2rem', display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                <button onClick={() => navigate(-1)} className="neo-btn" style={{ padding: '0.5rem', background: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <ArrowLeft size={24} />
+                </button>
+                <div style={{ flex: 1, height: '16px', background: 'white', border: 'var(--border-thick)', borderRadius: 'var(--radius-pill)', overflow: 'hidden' }}>
+                    <div style={{ height: '100%', width: `${((currentIndex) / quizzes.length) * 100}%`, background: 'var(--accent-lime)', transition: 'width 0.3s ease' }}></div>
+                </div>
             </div>
 
             <div className="neo-box animate-slide" style={{ width: '100%', maxWidth: '600px' }}>
